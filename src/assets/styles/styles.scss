@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import "custom-variables";
+
+
+// css for skeleton
+.wrapper{
+    prime-header{
+        height: 80px;
+    }
+    .main{
+        display: flex;
+        .content-container{
+            padding: 1rem;
+            width: 100%;
+        }
+    }
+}
+
+
+// bootstrap overwrite
+@media (min-width: 1400px){
+    .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 1480px;
+    }
+}

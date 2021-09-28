@@ -1,0 +1,15 @@
+//@import "functions", "mixins", "variables";
+@import "~src/assets/styles/custom-variables";
+:host{
+    display: flex;
+    background-color: darkred;
+    color: white;
+    align-items: center;
+}
+ul.navigation{
+    @include listReset;
+    display: flex;
+    li{
+        padding: 0 1rem;
+    }
+}

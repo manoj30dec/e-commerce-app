@@ -1,0 +1,51 @@
+// scss mixins and functions
+@mixin remWithProperty($property, $value) {
+  #{$property}: ($value / 16) + rem;
+}
+@function rem($value) {
+  $remValue: ($value / 16) + rem;
+  @return $remValue;
+}
+
+@mixin border(
+  $size: var(--sv-border-1),
+  $color: var(--sv-color-secondary-2),
+  $type: solid
+) {
+  border: $size $color $type;
+}
+@mixin listReset($value: 0, $listStyle: none) {
+  margin: $value $value $value $value;
+  padding: $value $value $value $value;
+  list-style: $listStyle;
+}
+@mixin borderRadius(
+  $topLeft: 0,
+  $topRight: 0,
+  $bottomRight: 0,
+  $bottomLeft: 0
+) {
+  border-top-left-radius: $topLeft;
+  -webkit-border-top-left-radius: $topLeft;
+  -moz-border-radius-topleft: $topLeft;
+
+  border-top-right-radius: $topRight;
+  -webkit-border-top-right-radius: $topRight;
+  -moz-border-radius-topright: $topRight;
+
+  border-bottom-right-radius: $bottomRight;
+  -webkit-border-bottom-right-radius: $bottomRight;
+  -moz-border-radius-bottomright: $bottomRight;
+
+  border-bottom-left-radius: $bottomLeft;
+  -webkit-border-bottom-left-radius: $bottomLeft;
+  -moz-border-radius-bottomleft: $bottomLeft;
+}
+
+// mixing for bckground icon
+@mixin icon($width: 1.5rem, $height: 1.5rem, $imgPath) {
+  display: inline-block;
+  width: $width;
+  height: $height;
+  background: url($imgPath) no-repeat center center;
+}

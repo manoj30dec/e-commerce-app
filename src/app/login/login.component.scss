@@ -1,0 +1,32 @@
+@import "functions", "mixins", "variables";
+@import "~src/assets/styles/custom-variables";
+.login-form {
+  width: 40%;
+  margin: auto;
+  padding: 1rem;
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+  }
+}
+
+.required-message{
+  color: #d63384;
+  padding:0.2rem;
+  margin: 0.2rem 0 0 0;
+  display: block;
+  border-radius: 5px;
+  &.not-correct{
+    background-color: #f8d7da;
+  }
+}
+
+.form-signin {
+  max-width: 330px;
+
+  padding: 15px;
+  margin: 0 auto;
+}
+
+input {
+  margin-bottom: 20px;
+}

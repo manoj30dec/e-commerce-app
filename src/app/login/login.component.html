@@ -1,0 +1,76 @@
+<!-- 
+<form class="login-form" [formGroup]="loginForm"  (ngSubmit)="onSubmit()">
+  <strong>username: mor_2314</strong><br>
+  <strong>password: 83r5^_</strong><br><br>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email address" name="email" formControlName="email" required>
+
+    <div *ngIf="(emailControl.invalid && emailControl.touched) || emailControl.dirty">
+      <small class="required-message" *ngIf="emailControl.errors?.required">Email address is required</small>
+      <small class="required-message not-correct" *ngIf="emailControl.errors?.pattern">Email address is invalid</small>
+    </div>
+  </div>
+  
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1"  name="password" formControlName="password">
+    <div *ngIf="(passwordControl.invalid && passwordControl.touched) || passwordControl.dirty">
+      <small class="required-message" *ngIf="passwordControl.errors?.required">Password is required</small>
+      <small class="required-message not-correct" *ngIf="passwordControl.errors?.minlength">Password should have minimum 6 length correctors</small>
+    </div>
+  </div>
+
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="remeberMe"  name="rememberMe" formControlName="rememberMe">
+    <label class="form-check-label" for="remeberMe">Remember Me</label>
+  </div>
+  <button type="submit" class="btn btn-primary" [class.disabled]="loginForm.status === 'INVALID'">Submit</button>
+</form> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 text-center" style="padding-top: 20px">
+      <div
+        class="container box"
+        style="margin-top: 10px; padding-left: 0px; padding-right: 0px"
+      >
+        <div class="row">
+          <div class="col-12" style="text-align: center">
+            <form
+              [formGroup]="formData"
+              (ngSubmit)="onClickSubmit(formData.value)"
+              class="form-signin"
+            >
+              <h2 class="form-signin-heading">Please sign in</h2>
+              <p>Username:Admin & Password:Admin</p>
+              <p>Username:User & Password:User</p>
+              <label for="inputEmail" class="sr-only">Email address</label>
+              <input
+                type="text"
+                id="username"
+                class="form-control"
+                formControlName="userName"
+                placeholder="Username"
+                required
+                autofocus
+              />
+              <label for="inputPassword" class="sr-only">Password</label>
+              <input
+                type="password"
+                id="inputPassword"
+                class="form-control"
+                formControlName="password"
+                placeholder="Password"
+                required
+              />
+              <button class="btn btn-lg btn-primary btn-block" type="submit">
+                Sign in
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
